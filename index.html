@@ -12,20 +12,26 @@
 </head>
 
 <body>
-    <!-- Video -->
-    <div id="vieo-wrapper">
-        <span class="title">You're on PIP Mode</span>
-        <!-- <video id="video" controls height="360" width="640" hidden></video> -->
-        <video id="video" controls hidden></video>
-    </div>
+    <main>
 
 
-    <!-- Button -->
-    <div id="button-wrapper">
+        <!-- Video -->
+        <div id="vieo-wrapper">
+            <span class="title">You're on PIP Mode</span>
+            <!-- <video id="video" controls height="360" width="640" hidden></video> -->
+            <video id="video" controls hidden></video>
+        </div>
+
+
+        <!-- Button -->
         <div class="button-container">
-            <div class="title">PICTURE IN PICTURE</div>
-            <button id="button">START</button>
-            <!--  -->
+            <div>
+                <div class="title">PICTURE IN PICTURE</div>
+                <button id="button">START</button>
+            </div>
+        </div>
+        <!-- --------------------------------- -->
+        <div id="button-wrapper">
             <div id="pip-module">
                 <div class="label-text">PIP Mode</div>
                 <label id="pip-toggle-btn">
@@ -42,9 +48,8 @@
                 <div class="close-icon"><i class="fas fa-times"></i></div>
             </div>
         </div>
-    </div>
 
-
+    </main>
     <!-- Script -->
     <script src="script.js"></script>
 </body>
