@@ -36,28 +36,29 @@ const stopMediaStreamOn = () => {
   mediaStreamTrack.forEach(media => media.stop());
 };
 
-
+// SHARE / STOP BUTTON
 let isShared = true;
 buttonShare.addEventListener('click', async () => {
   mediaStreamTrack = mediaStream.getVideoTracks();
   console.log('mediaStreamTrack', mediaStreamTrack)
   // Disable Button
-  buttonShare.disabled = true;
+  // buttonShare.disabled = true;*******
   // Start Picture in Picture
   if (isShared) {
     await videoElement.requestPictureInPicture();
     buttonShare.innerText = 'Stop PIP Mode';
     isShared = false;
   } else {
-    console.log('before exit', isShared)
-    await document.exitPictureInPicture();
+    // console.log('before exit', isShared)
+    // await document.exitPictureInPicture();
     isShared = true;
-    console.log('after exit', isShared)
+    // console.log('after exit', isShared)
     stopMediaStreamOn();
+    document.exitPictureInPicture();
     buttonShare.style.display = 'none';
   }
 
   // Reset BUtton after successfully requestPictureInPicture, otherwise button will remain disabled
-  buttonShare.disabled = false;
+  // buttonShare.disabled = false; ***********
 });
 
