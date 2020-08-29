@@ -8,21 +8,12 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  /* background: #000e1d; */
-  background: #d4e3f4;
-  /* background-color: rgb(37,37,37); */
+  background: #000e1d;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-main {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #video-wrapper {
@@ -33,16 +24,12 @@ main {
   height: 0;
   padding-bottom: 24%;
   text-align: center;
-  /* display: none; */
-  display: inline-block;
-}
-#video-wrapper span {
-  display: inline-block;
-  margin-top: 110px;
+  display: none;
+  /* display: inline-block; */
 }
 
 #video {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -101,10 +88,13 @@ button {
 }
 
 #button-share {
-  width: 500px;
+  /* width: 500px;
   padding: 15px;
   font-size: 30px;
-  letter-spacing: 15px;
+  letter-spacing: 15px; */
+  width: 250px;
+  padding: 5px;
+  font-size: 20px;
 }
 
 button:hover {
