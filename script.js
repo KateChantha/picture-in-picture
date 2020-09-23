@@ -10,20 +10,23 @@ async function selectMedia() {
   try {
     // assign mediaStream to whichever screen/window that user selected to share
     mediaStream = await navigator.mediaDevices.getDisplayMedia();
+
     // pass mediaStream into video object as its source/value of object
     videoElement.srcObject = mediaStream;
     // when video has loaded metadata , call a fuction to play a video
     videoElement.onloadeddata = () => {
       videoElement.play();
     }
+
   } catch (error) {
     console.log('whoops, error in select media', error)
     buttonShare.style.display = 'none';
   }
 }
 
-buttonSelect.addEventListener('click', () => {
-  selectMedia();
+buttonSelect.addEventListener('click', async () => {
+  await selectMedia();
+
   buttonShare.innerText = 'Play PIP Mode';
   buttonShare.style.display = 'block';
 });
