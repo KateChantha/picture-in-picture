@@ -29,6 +29,7 @@ buttonSelect.addEventListener('click', async () => {
 
   buttonShare.innerText = 'Play PIP Mode';
   buttonShare.style.display = 'block';
+  buttonSelect.style.display = 'none'; //+++++++
 });
 
 let mediaStreamTrack;
@@ -59,6 +60,7 @@ buttonShare.addEventListener('click', async () => {
     stopMediaStreamOn();
     document.exitPictureInPicture();
     buttonShare.style.display = 'none';
+    buttonSelect.style.display = 'block'; //+++++++
   }
 
   // Reset BUtton after successfully requestPictureInPicture, otherwise button will remain disabled
