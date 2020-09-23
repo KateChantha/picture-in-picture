@@ -79,6 +79,7 @@ button {
   cursor: pointer;
   border-radius: 100px;
   transition: 1.5s;
+  margin-bottom: 1em;
 }
 #button-select {
   width: 250px;
